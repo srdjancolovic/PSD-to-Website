@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato";
+  overflow-x: hidden;
+}
+@import "./vars";
+@import "./main";
+@import "./stickyNav";
+@import "./history";
+@import "./tabAndAccordionBtns";
+@import "./climb";
+@import "./scheduleBox";
+@import "./copyright";

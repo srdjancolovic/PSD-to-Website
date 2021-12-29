@@ -1,0 +1,64 @@
+//Schedule box
+.schedule__wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.schedule__box__wrapper {
+  background-color: $scheduleWrapperBackground;
+  position: absolute;
+  min-width: 350px;
+  min-height: 230px;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  .schedule__content {
+    max-width: 270px;
+    margin: 0 auto;
+    padding: 25px 0;
+    .schedule__heading {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: "Oswald";
+      color: $scheduleHeadingColor;
+      font-size: $scheduleHeadingDeskt;
+      margin-bottom: 10px;
+    }
+
+    .schedule__info {
+      display: flex;
+      justify-content: space-between;
+      min-height: 24px;
+      color: $descriptionTextColor;
+      p {
+        font-size: $scheduleInfoDeskt;
+        line-height: 1.5;
+        max-width: 132px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .schedule__wrapper {
+    max-width: 100%;
+    .schedule__box__wrapper {
+      left: 110px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .schedule__wrapper {
+    .schedule__box__wrapper {
+      left: 60px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .schedule__wrapper {
+    .schedule__box__wrapper {
+      min-width: 320px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}

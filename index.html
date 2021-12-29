@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Lato and Oswald font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Swiper slider -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="img/LA Mountains Icon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>PSD to Website</title>
+  </head>
+  <body>
+    <!-- Main section  -->
+    <main>
+      <nav>
+        <div class="logo">
+          <img src="img/Logo.png" alt="Logo" />
+        </div>
+        <ul class="links">
+          <li><a href="#sticky" class="link history__link">01. History</a></li>
+          <li><a href="#team" class="link team__link">02. Team</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Sticky navigation -->
+    <section class="sticky__nav" id="sticky">
+      <div class="nav__content">
+        <div class="logo__heading">
+          <img src="img/Logo.png" class="logo" alt="Los Angeles Mountains" />
+          <img src="img/logoHeading.png" class="heading" alt="Los Angeles Mountains" />
+        </div>
+        <ul class="links">
+          <li><a href="#before__history" class="link history__link">01. History</a></li>
+          <li><a href="#team" class="link team__link">02. Team</a></li>
+        </ul>
+        
+    </section>
+
+    <!-- Before history section (for navigation) -->
+    <div class="before_history" id="before__history"></div>
+
+    <!-- History section -->
+    <section class="history" id="history">
+
+      <!-- Heading with number and text -->
+      <div class="num__heading">
+        <h2 class="number">01.</h2>
+        <h3 class="heading">History</h3>
+      </div>
+
+      <!-- History description text -->
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reprehenderit eum mollitia rem magnam qui, repellendus maxime minus consequuntur accusantium cumque, autem rerum expedita, animi ipsa nesciunt pariatur! Perspiciatis, in?
+      </p>
+
+      <!-- History carousel -->
+      <div class="slider__wrapper">
+        <div class="swiper history__imgs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/slPhoto1.png" alt="Top of mountain" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slPhoto2.png" alt="Mountain landscape" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slPhoto1.png" alt="Top of mountain" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slPhoto2.png" alt="Mountain landscape" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slPhoto1.png" alt="Top of mountain" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slPhoto2.png" alt="Mountain landscape" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Climb section -->
+    <section id="team">
+      <div class="climb">
+        <!-- Heading -->
+        <div class="climb__heading__wrapper">
+          <div class="num_heading_climb">
+            <h2 class="number">02.</h2>
+            <h3 class="heading">Climb</h3>
+          </div>
+
+          <!-- Climb description text -->
+          <p class="climb_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus lorem qui ratione iusto repellendus provident, numquam 
+           
+          </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs__wrapper">
+          <div class="buttons">
+            <a 
+              class="tab__button" rel="tab1"
+               id="first__tab__btn"
+            >
+              Mountain 1
+            </a>
+            <a  class="tab__button" rel="tab2">
+              Mountain 2
+            </a>
+          </div>
+        </div>
+
+        <!-- Slides -->
+
+        <!-- Accordion button for Mountain 1 -->
+        <h3 class="accordion__btn" id="first__accordion__btn" rel="tab1">Mountain 1</h3>
+
+        <!-- First slide -->
+
+        <div class="slide__content" id="tab1">
+          <div class="schedule__wrapper">
+            <div class="schedule__box__wrapper">
+              <div class="schedule__content">
+                <h2 class="schedule__heading">Schedule</h2>
+                <div class="schedule__info">
+                  <p class="schedule__info--date">25 Nov 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+                <div class="schedule__info">
+                  <p class="schedule__info--date">28 Nov 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+                <br />
+                <div class="schedule__info">
+                  <p class="schedule__info--date">18 Dec 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra </p>
+                </div>
+                <br />
+                <div class="schedule__info">
+                  <p class="schedule__info--date">7 Jan 2017</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion button for Mountain 2 -->
+        <h3 class="accordion__btn" id="second__accordion__btn" rel="tab2">Mountain 2</h3>
+
+        <!-- Second slide -->
+
+        <div class="slide__content" id="tab2">
+          <div class="schedule__wrapper">
+            <div class="schedule__box__wrapper">
+              <div class="schedule__content">
+                <h2 class="schedule__heading">Schedule</h2>
+
+                <div class="schedule__info">
+                  <p class="schedule__info--date">17 Nov 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+                <br />
+                <div class="schedule__info">
+                  <p class="schedule__info--date">13 Dec 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+                <div class="schedule__info">
+                  <p class="schedule__info--date">28 Dec 2016</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+                <br />
+                <div class="schedule__info">
+                  <p class="schedule__info--date">9 Feb 2017</p>
+                  <p class="schedule__info--desc">Vestibulum viverra</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div class="copyright__content">
+            <div class="logo_heading">
+              <img src="img/logoDark.png" alt="Los Angeles Mountains" />
+              <img src="img/logoHeadingDark.png" class="heading" alt="Los Angeles Mountains" />
+            </div>
+            <p class="copyright__text">©Copyright 2016. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Script tags -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

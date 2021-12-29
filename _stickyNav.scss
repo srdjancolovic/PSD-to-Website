@@ -1,0 +1,90 @@
+.sticky__nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: $stickyNavBackgroundColor;
+  z-index: 1000;
+  .nav__content {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    padding-left: 25px;
+    margin: 0 auto;
+  }
+  .logo__heading {
+    .heading {
+      margin-left: 10px;
+    }
+  }
+  .links {
+    @include navLinks;
+    li {
+      a {
+        color: $navLinksDarkColor;
+        &::after {
+          background-color: $navLinksDarkColor;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .sticky__nav {
+    .nav__content {
+      max-width: 100%;
+      padding-left: 0;
+      padding: 0 100px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .sticky__nav {
+    .nav__content {
+      padding: 0 50px;
+      .links {
+        flex-direction: column;
+        li {
+          padding-bottom: 8px;
+          margin-right: 0;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .sticky__nav {
+    .nav__content {
+      padding: 0 30px;
+      position: relative;
+      .links {
+        li {
+          padding-bottom: 10px;
+          a {
+            font-size: $linkMobile;
+          }
+          .history__link {
+            &::after {
+              width: 87px;
+            }
+          }
+          .team__link {
+            &::after {
+              width: 67px;
+            }
+          }
+        }
+      }
+    }
+    .logo__heading {
+      .heading {
+        width: 100px;
+      }
+    }
+  }
+}

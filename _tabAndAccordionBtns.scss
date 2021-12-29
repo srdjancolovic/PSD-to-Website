@@ -1,0 +1,52 @@
+//Tabs
+.tabs__wrapper {
+  width: 100%;
+  height: 40px;
+  background-color: $tabsWrapperBackground;
+  position: relative;
+  .buttons {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    .tab__button {
+      width: 140px;
+      height: 100%;
+      @include tabAndAccordionButton;
+    }
+    .tab__button__active {
+      @include tabandAccordionButtonActive;
+    }
+  }
+}
+.accordion__btn {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .tabs__wrapper {
+    .buttons {
+      max-width: 100%;
+      padding: 0 110px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .tabs__wrapper {
+    .buttons {
+      padding: 0 60px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .tabs__wrapper {
+    display: none;
+  }
+  .accordion__btn {
+    @include tabAndAccordionButton;
+    height: 40px;
+    margin: 0;
+  }
+  .accordion__btn__active {
+    @include tabandAccordionButtonActive;
+  }
+}

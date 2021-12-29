@@ -1,0 +1,104 @@
+///Climb section marked as TEAM section because of Team link
+#team {
+  &::before {
+    content: "";
+    display: block;
+    height: 75px;
+    margin-top: -75px;
+  }
+}
+//Climb section
+.climb {
+  width: 100%;
+  background: $climbSectionBackgroundColor;
+  position: relative;
+  //Climb heading wrapper (number, heading, description text)
+  .climb__heading__wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    // max-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .num_heading_climb {
+    position: relative;
+    .number {
+      @include headingNumber;
+    }
+    .heading {
+      left: 131px;
+      top: 80px;
+      @include headingText;
+    }
+  }
+  .climb_text {
+    max-width: 600px;
+    margin-left: 80px;
+    padding: 40px 0;
+    @include descriptionText;
+  }
+}
+
+//Slide content (background images)
+.slide__content {
+  display: none;
+  width: 100%;
+  height: 620px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+//Images
+#tab1 {
+  background-image: url("img/slideOneBg.png");
+}
+#tab2 {
+  background-image: url("img/slideTwoBg.png");
+}
+
+////RESPONSIVE
+@media (max-width: 1200px) {
+  .climb {
+    .climb__heading__wrapper {
+      max-width: 960px;
+      padding: 40px 70px 40px 100px;
+    }
+    .climb_text {
+      padding: 0px 20px 0px 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .climb {
+    .climb__heading__wrapper {
+      max-width: 100%;
+      padding: 0 50px 0 50px;
+    }
+    .climb_text {
+      padding: 40px 20px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .climb {
+    .climb__heading__wrapper {
+      padding: 40px 30px 40px 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .climb_text {
+      margin-top: -10px;
+      margin-left: 10px;
+      margin-bottom: 40px;
+      padding: 0 0;
+    }
+
+    .slide__content {
+      display: none;
+      height: 500px;
+    }
+  }
+}

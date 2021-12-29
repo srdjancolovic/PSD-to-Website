@@ -1,0 +1,171 @@
+////COLORS
+
+/////Navigation colors
+$navLinksDarkColor: rgb(65, 79, 107);
+$navLinksLightColor: rgb(254, 254, 255);
+$stickyNavBackgroundColor: white;
+
+/////Heading number, text and description
+$headingNumberColor: rgba(65, 79, 107, 0.502);
+$headingTextColor: rgb(65, 79, 107);
+$descriptionTextColor: rgb(0, 0, 0);
+
+/////Slider background
+$sliderBackgroundColor: rgba(65, 79, 107, 0.8);
+$sliderPaginationBulletColor: white;
+
+//Climb section
+$climbSectionBackgroundColor: white;
+/////Wrapper around tab and accordion buttons
+$tabsWrapperBackground: rgb(65, 79, 107);
+
+/////Wrapper around schedule box
+$scheduleWrapperBackground: rgba(255, 255, 255, 0.7);
+
+///Button colors
+$buttonBackground: rgb(65, 79, 107);
+$buttonColor: rgb(176, 180, 190);
+
+$activeButtonBackground: rgb(176, 180, 190);
+$activeButtonColor: rgb(65, 79, 107);
+
+/////Schedule box heading
+$scheduleHeadingColor: rgb(65, 79, 107);
+
+/////Copyright colors
+$copyrightColor: rgb(99, 118, 157);
+$copyrightBackgroundColor: rgb(65, 79, 107);
+$copyrightBorderColorMobile: rgb(99, 118, 157);
+
+/////FONT SIZES
+
+///Nav links font sizes
+$linkDeskt: 16px;
+$linkMobile: 13px;
+
+///Heading and Number font size
+$headingNumDeskt: 120px;
+
+$headingTextDeskt: 28px;
+$headingTextMobile: 24px;
+
+//Description text font size
+$textDeskt: 16px;
+$textMobile: 15px;
+
+//Tab/accordion button font size
+$tabBtnDeskt: 18px;
+
+//Schedule font size
+$scheduleHeadingDeskt: 28px;
+$scheduleHeadingMobile: 24px;
+
+//Schedule date and description font size
+$scheduleInfoDeskt: 16px;
+
+/////MIXINS
+//Navigations links
+@mixin navLinks {
+  display: flex;
+  list-style: none;
+  li {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      font-style: italic;
+      font-weight: bold;
+      font-size: $linkDeskt;
+      color: $navLinksLightColor;
+      text-transform: uppercase;
+      line-height: 1.6;
+      text-decoration: none;
+      letter-spacing: 1px;
+      width: 85px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        background-color: $navLinksLightColor;
+        bottom: -4px;
+        left: 0;
+      }
+    }
+    .history__link {
+      &::after {
+        width: 105px;
+      }
+    }
+    .team__link {
+      &::after {
+        width: 80px;
+      }
+    }
+  }
+}
+
+//Heading text
+@mixin headingText {
+  position: absolute;
+  color: $headingTextColor;
+  font-size: $headingTextDeskt;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Oswald";
+}
+//Heading number
+@mixin headingNumber {
+  font-family: "Oswald";
+  font-size: $headingNumDeskt;
+  color: $headingNumberColor;
+  font-weight: bold;
+}
+//Description text
+@mixin descriptionText {
+  font-size: $textDeskt;
+  color: $descriptionTextColor;
+  line-height: 1.5;
+}
+
+//Tab / accordion button style
+@mixin tabAndAccordionButton {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Oswald";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $tabBtnDeskt;
+  color: $activeButtonBackground;
+  background-color: $buttonBackground;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus {
+    border: none;
+    outline: 0;
+  }
+}
+
+//Tab / accordion button active style
+@mixin tabandAccordionButtonActive {
+  color: $activeButtonColor;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+  background-color: $activeButtonBackground;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 97px;
+    height: 2px;
+    background-color: $activeButtonColor;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+  }
+}
